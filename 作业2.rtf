@@ -1,0 +1,106 @@
+{\rtf1\fbidis\ansi\ansicpg0\uc1\deff0\deflang0\deflangfe0{\fonttbl{\f0\fnil \'cb\'ce\'cc\'e5;}{\f1\fnil Consolas;}{\f2\fnil Times New Roman;}{\f3\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}{\colortbl;\red0\green0\blue255;\red255\green0\blue0;\red0\green0\blue0;\red255\green255\blue255;}
+
+
+\pard\sl360\slmult1\fi420\li0\qc\ri0\sb0\sa0\itap0 \plain \f3\b\lang2052\fs24\cf3 \uc2\u20316 \'d7\'f7\u19994 \'d2\'b52\uc1
+\par \pard\sl360\slmult1\fi420\li0\ql\ri0\sb0\sa0\itap0 
+\par 
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 \plain \f1\fs24 hive\uc2\u20851 \'b9\'d8\u32852 \'c1\'aamysql\u65306 \'a3\'ba\uc1
+\par 
+\par 1.\uc2\u22312 \'d4\'dajah-01\u22522 \'bb\'f9\u30784 \'b4\'a1\u19978 \'c9\'cf\u65292 \'a3\'ac\u25171 \'b4\'f2\u24320 \'bf\'aa\u34394 \'d0\'e9\u25311 \'c4\'e2\u26426 \'bb\'fa\u65292 \'a3\'ac\u23548 \'b5\'bc\u20837 \'c8\'ebjah-01,\uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 1.1\uc2\u27492 \'b4\'cb\u26102 \'ca\'b1\u30340 \'b5\'c4\u26377 \'d3\'d0\u23436 \'cd\'ea\u25972 \'d5\'fb\u30340 \'b5\'c4\u20266 \'ce\'b1\u20998 \'b7\'d6\u24067 \'b2\'bc\u29615 \'bb\'b7\u22659 \'be\'b3\u65292 \'a3\'ac\uc1
+\par 1.2\uc2\u23433 \'b0\'b2\u35013 \'d7\'b0\u22909 \'ba\'c3\u30340 \'b5\'c4mysql-5.6.33 \u22312 \'d4\'damysql\u29992 \'d3\'c3\u25143 \'bb\'a7\u19979 \'cf\'c2/home/mysql/\uc1
+\par 1.3\uc2\u26410 \'ce\'b4\u23433 \'b0\'b2\u35013 \'d7\'b0\u30340 \'b5\'c4hive\uc1
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 
+\par 2.\uc2\u22312 \'d4\'daroot\u19979 \'cf\'c2\u26032 \'d0\'c2\u24314 \'bd\'a8\u29992 \'d3\'c3\u25143 \'bb\'a7whw,\u26356 \'b8\'fc\u25913 \'b8\'c4/app\u30446 \'c4\'bf\u24405 \'c2\'bc\u30340 \'b5\'c4\u26435 \'c8\'a8\u38480 \'cf\'de chown -R whw:whw /app\uc1
+\par 
+\par 3.\uc2\u21033 \'c0\'fb\u29992 \'d3\'c3CRT\u19978 \'c9\'cf\u20256 \'b4\'abhive-0.14\u23433 \'b0\'b2\u35013 \'d7\'b0\u21253 \'b0\'fc\u21040 \'b5\'bd/app/soft\uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 sftp>cd /app/soft 
+\par sftp> put D:/work/teach/toolstch/80linuxhadoop/hive/apache-hive-0.14.0-bin.tar.gz
+\par 
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 4.\uc2\u35299 \'bd\'e2\u21387 \'d1\'b9\uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 $ cd /app 
+\par $ tar -zxvf /app/soft/apache-hive-0.14.0-bin.tar.gz 
+\par $ mv apache-hive-0.14.0-bin/ hive-0.14.0/ 
+\par 
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 5.\uc2\u37197 \'c5\'e4\u32622 \'d6\'c3hive\u36816 \'d4\'cb\u34892 \'d0\'d0\u25991 \'ce\'c4\u20214 \'bc\'fe\uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 $ cd /app/hive-0.14.0/conf 
+\par [jah@jah64-01 conf]$ cp hive-env.sh.template hive-env.sh 
+\par [jah@jah64-01 conf]$ vi hive-env.sh 
+\par # Set HADOOP_HOME to point to a specific hadoop install directory 
+\par HADOOP_HOME=/app/hadoop-2.6.1 
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 
+\par 6.\uc2\u21551 \'c6\'f4\u21160 \'b6\'afhive\uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 \uc2\u22312 \'d4\'da\u21551 \'c6\'f4\u21160 \'b6\'af hive \u21069 \'c7\'b0\u38656 \'d0\'e8\u20808 \'cf\'c8\u21551 \'c6\'f4\u21160 \'b6\'af hadoop \u21644 \'ba\'cd yarn \uc1\u61550 ? 
+\par \uc2\u21551 \'c6\'f4\u21160 \'b6\'af \uc1
+\par [jah@jah64-01 bin]$ pwd /app/hive-0.14.0/bin 
+\par [jah@jah64-01 bin]$ ./hive 
+\par hive>exit;
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 
+\par 7.\uc2\u21551 \'c6\'f4\u21160 \'b6\'afmysql\u26381 \'b7\'fe\u21153 \'ce\'f1\uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 su mysql
+\par \uc2\u23494 \'c3\'dc\u30721 \'c2\'eb\u65306 \'a3\'bahadoop\uc1
+\par cd /home/mysql/mysql-5.6.33/
+\par [mysql@jah64-01 mysqldata]$ cd /home/mysql/mysql-5.6.33/ 
+\par [mysql@jah64-01 mysql-5.6.33]$ ./support-files/mysql.server start
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 
+\par 8.\uc2\u30331 \'b5\'c7\u24405 \'c2\'bcmysql\uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 $ mysql -uroot \endash p    \uc2\u20351 \'ca\'b9\u29992 \'d3\'c3 root \u29992 \'d3\'c3\u25143 \'bb\'a7\u36827 \'bd\'f8\u20837 \'c8\'eb ,\u39318 \'ca\'d7\u27425 \'b4\'ce\u36827 \'bd\'f8\u20837 \'c8\'eb\u27809 \'c3\'bb\u26377 \'d3\'d0\u23494 \'c3\'dc\u30721 \'c2\'eb\u65292 \'a3\'ac\u36827 \'bd\'f8\u21435 \'c8\'a5\u20043 \'d6\'ae\u21518 \'ba\'f3\u21487 \'bf\'c9\u20197 \'d2\'d4\u35774 \'c9\'e8\u32622 \'d6\'c3\u23494 \'c3\'dc\u30721 \'c2\'eb\uc1
+\par $mysql                \uc2\u20351 \'ca\'b9\u29992 \'d3\'c3 mysql \u29992 \'d3\'c3\u25143 \'bb\'a7\u36827 \'bd\'f8\u20837 \'c8\'eb \uc1
+\par mysql>show databases;  
+\par mysql>select user();   \uc2\u26597 \'b2\'e9\u35810 \'d1\'af\u24403 \'b5\'b1\u21069 \'c7\'b0\u29992 \'d3\'c3\u30331 \'b5\'c7\u24405 \'c2\'bc\u29992 \'d3\'c3\u25143 \'bb\'a7 \uc1
+\par 
+\par \uc2\u35774 \'c9\'e8\u32622 \'d6\'c3root\u23494 \'c3\'dc\u30721 \'c2\'eb\u65306 \'a3\'ba\uc1
+\par \tab mysql>SET PASSWORD = PASSWORD('root');
+\par 
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 9. \uc2\u37197 \'c5\'e4\u32622 \'d6\'c3 mysql,\u20351 \'ca\'b9\u20854 \'c6\'e4\u23427 \'cb\'fc\u30005 \'b5\'e7\u33041 \'c4\'d4\u21487 \'bf\'c9\u20197 \'d2\'d4\u30331 \'b5\'c7\u24405 \'c2\'bc\u27492 \'b4\'cb mysql \u26381 \'b7\'fe\u21153 \'ce\'f1\u22120 \'c6\'f7 \uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 \tab \uc2\u40664 \'c4\'ac\u35748 \'c8\'cf\u24773 \'c7\'e9\u20917 \'bf\'f6\u19979 \'cf\'c2\u65292 \'a3\'ac\u21018 \'b8\'d5\u23433 \'b0\'b2\u35013 \'d7\'b0\u22909 \'ba\'c3\u30340 \'b5\'c4 mysql \u26381 \'b7\'fe\u21153 \'ce\'f1\u22120 \'c6\'f7\u65292 \'a3\'ac\u20854 \'c6\'e4\u23427 \'cb\'fc\u30005 \'b5\'e7\u33041 \'c4\'d4\u26159 \'ca\'c7\u19981 \'b2\'bb\u33021 \'c4\'dc\u35775 \'b7\'c3\u38382 \'ce\'ca\u30340 \'b5\'c4\u65292 \'a3\'ac\u38656 \'d0\'e8\u35201 \'d2\'aa\u25480 \'ca\'da\u26435 \'c8\'a8\u65292 \'a3\'ac\u20854 \'c6\'e4\u23427 \'cb\'fc\u30005 \'b5\'e7\u33041 \'c4\'d4\u25165 \'b2\'c5\u33021 \'c4\'dc\u35775 \'b7\'c3\u38382 \'ce\'ca \u19979 \'cf\'c2\u38754 \'c3\'e6\u25480 \'ca\'da\u20104 \'d3\'e8\u20840 \'c8\'ab\u37096 \'b2\'bf\u30005 \'b5\'e7\u33041 \'c4\'d4\u21487 \'bf\'c9\u20197 \'d2\'d4\u35775 \'b7\'c3\u38382 \'ce\'ca\u24403 \'b5\'b1\u21069 \'c7\'b0\u30340 \'b5\'c4 mysql \u25968 \'ca\'fd\u25454 \'be\'dd\u24211 \'bf\'e2\u26381 \'b7\'fe\u21153 \'ce\'f1\u22120 \'c6\'f7\u65292 \'a3\'ac\u20197 \'d2\'d4 root \u29992 \'d3\'c3\u25143 \'bb\'a7\u65292 \'a3\'ac\u23494 \'c3\'dc\u30721 \'c2\'eb root \uc1
+\par $ ./mysql -uroot -p  //\uc2\u20351 \'ca\'b9\u29992 \'d3\'c3 root \u29992 \'d3\'c3\u25143 \'bb\'a7\u36827 \'bd\'f8\u20837 \'c8\'eb \uc1
+\par mysql>   
+\par mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION; 
+\par mysql> flush privileges;  //\uc2\u21047 \'cb\'a2\u26032 \'d0\'c2\u26435 \'c8\'a8\u38480 \'cf\'de \uc1
+\par mysql>select host, user, password from mysql.user; 
+\par 
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 10.hive\uc2\u20851 \'b9\'d8\u32852 \'c1\'aamysql\uc1
+\par 
+\par 11. \uc2\u20462 \'d0\'de\u25913 \'b8\'c4 hdfs \u19978 \'c9\'cf\u30340 \'b5\'c4\u30446 \'c4\'bf\u24405 \'c2\'bc\u26435 \'c8\'a8\u38480 \'cf\'de \uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 $ cd /app/hadoop-2.6.1/ 
+\par $ bin/hadoop fs -chmod g+w /tmp 
+\par $ bin/hadoop fs -chmod g+w /user/hive/warehouse 
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 
+\par 12.\uc2\u37197 \'c5\'e4\u32622 \'d6\'c3 hive\u65292 \'a3\'ac\u32852 \'c1\'aa\u25509 \'bd\'d3 mysql \uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 $ cd /app/hive-0.14.0/conf/ 
+\par $ vi hive-site.xml 
+\par <configuration> 
+\par <property> 
+\par <name>javax.jdo.option.ConnectionURL</name> 
+\par <value>jdbc:mysql://\plain \f1\fs24\cf2 whw-01\plain \f1\fs24 :3306/hive?createDatabaseIfNotExist=true</value> 
+\par </property> 
+\par <property> 
+\par <name>javax.jdo.option.ConnectionDriverName</name>
+\par <value>com.mysql.jdbc.Driver</value> 
+\par </property> 
+\par <property> 
+\par <name>javax.jdo.option.ConnectionUserName</name>
+\par <value>root</value>    \plain \f1\fs24\cf2 //root\uc2\u20026 \'ce\'aa\u25968 \'ca\'fd\u25454 \'be\'dd\u24211 \'bf\'e2root\u29992 \'d3\'c3\u25143 \'bb\'a7\uc1
+\par \plain \f1\fs24 </property> 
+\par <property> 
+\par <name>javax.jdo.option.ConnectionPassword</name> 
+\par <value>root</value> \plain \f1\fs24\cf2 //root\uc2\u20026 \'ce\'aa\u25968 \'ca\'fd\u25454 \'be\'dd\u24211 \'bf\'e2root\u29992 \'d3\'c3\u25143 \'bb\'a7\u30340 \'b5\'c4\u23494 \'c3\'dc\u30721 \'c2\'eb\uc1
+\par \plain \f1\fs24 </property> 
+\par </configuration>
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0  
+\par 13.\uc2\u19978 \'c9\'cf\u20256 \'b4\'ab mysql \u39537 \'c7\'fd\u21160 \'b6\'af\u21253 \'b0\'fc \uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 sftp>cd /app/hive-0.14.0/lib/ 
+\par sftp> put D:/work/teach/toolstch/80linuxhadoop/linux/mysql/mysql-connector-java-5.1.32.jar 
+\par 
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 14.\uc2\u21551 \'c6\'f4\u21160 \'b6\'afhive \uc1
+\par \pard\sl360\slmult1\fi540\li0\ql\ri0\sb0\sa0\itap0 $ cd /app/hive-0.14.0/bin $ ./hive
+\par 
+\par \pard\fi0\li0\ql\ri0\sb0\sa0\itap0 \plain \f2\fs24 \uc2\u21508 \'b8\'f7\u20301 \'ce\'bb\u21516 \'cd\'ac\u23398 \'d1\'a7\u65306 \'a3\'ba\u12304 \'a1\'be\u26377 \'d3\'d0\u20851 \'b9\'d8\u25512 \'cd\'c6\u36873 \'d1\'a1\u21457 \'b7\'a2\u23637 \'d5\'b9\u20826 \'b5\'b3\u21592 \'d4\'b1\u20107 \'ca\'c2\u39033 \'cf\'ee\u12305 \'a1\'bf\uc1
+\par \uc2\u25509 \'bd\'d3\u36890 \'cd\'a8\u30693 \'d6\'aa\u65292 \'a3\'ac\u22240 \'d2\'f2\u21517 \'c3\'fb\u39069 \'b6\'ee\u26377 \'d3\'d0\u38480 \'cf\'de\u12290 \'a1\'a3\u29616 \'cf\'d6\u38454 \'bd\'d7\u27573 \'b6\'ce\u25105 \'ce\'d2\u20204 \'c3\'c7\u38656 \'d0\'e8\u35201 \'d2\'aa\u25512 \'cd\'c6\u20986 \'b3\'f6\u19968 \'d2\'bb\u21517 \'c3\'fb\u31526 \'b7\'fb\u21512 \'ba\'cf\u25512 \'cd\'c6\u33616 \'bc\'f6\u35201 \'d2\'aa\u27714 \'c7\'f3\u30340 \'b5\'c4\u21516 \'cd\'ac\u23398 \'d1\'a7\u12290 \'a1\'a3\uc1
+\par \uc2\u25512 \'cd\'c6\u33616 \'bc\'f6\u35201 \'d2\'aa\u27714 \'c7\'f3\u65306 \'a3\'ba\uc1
+\par 1\uc2\u12289 \'a1\'a2\u24605 \'cb\'bc\u24819 \'cf\'eb\u31215 \'bb\'fd\u26497 \'bc\'ab\u65292 \'a3\'ac\u31215 \'bb\'fd\u26497 \'bc\'ab\u35201 \'d2\'aa\u27714 \'c7\'f3\u19978 \'c9\'cf\u36827 \'bd\'f8\u65292 \'a3\'ac\u31215 \'bb\'fd\u26497 \'bc\'ab\u21521 \'cf\'f2\u20826 \'b5\'b3\u32452 \'d7\'e9\u32455 \'d6\'af\u38752 \'bf\'bf\u25314 \'c2\'a3\u12290 \'a1\'a3\uc1
+\par 2\uc2\u12289 \'a1\'a2\u21521 \'cf\'f2\u20826 \'b5\'b3\u32452 \'d7\'e9\u32455 \'d6\'af\u36882 \'b5\'dd\u20132 \'bd\'bb\u20837 \'c8\'eb\u20826 \'b5\'b3\u30003 \'c9\'ea\u35831 \'c7\'eb\u20070 \'ca\'e9\u26102 \'ca\'b1\u24180 \'c4\'ea\u28385 \'c2\'fa18\u21608 \'d6\'dc\u23681 \'cb\'ea\u65292 \'a3\'ac\u19988 \'c7\'d2\u31215 \'bb\'fd\u26497 \'bc\'ab\u20998 \'b7\'d6\u23376 \'d7\'d3\u28385 \'c2\'fa\u19968 \'d2\'bb\u24180 \'c4\'ea\u12290 \'a1\'a3\u65288 \'a3\'a8\u22312 \'d4\'da2019\u24180 \'c4\'ea\u19978 \'c9\'cf\u21322 \'b0\'eb\u23398 \'d1\'a7\u26399 \'c6\'da\u26411 \'c4\'a9\u25512 \'cd\'c6\u36873 \'d1\'a1\u20837 \'c8\'eb\u20826 \'b5\'b3\u31215 \'bb\'fd\u26497 \'bc\'ab\u20998 \'b7\'d6\u23376 \'d7\'d3\u65289 \'a3\'a9\uc1
+\par 3\uc2\u12289 \'a1\'a2\u36807 \'b9\'fd\u21435 \'c8\'a5\u30340 \'b5\'c4\u19968 \'d2\'bb\u24180 \'c4\'ea\u20869 \'c4\'da\u26080 \'ce\'de\u36829 \'ce\'a5\u32426 \'bc\'cd\u26080 \'ce\'de\u25346 \'b9\'d2\u31185 \'bf\'c6\u65292 \'a3\'ac\u25552 \'cc\'e1\u20379 \'b9\'a9\u19978 \'c9\'cf\u19968 \'d2\'bb\u23398 \'d1\'a7\u24180 \'c4\'ea\u25945 \'bd\'cc\u21153 \'ce\'f1\u31995 \'cf\'b5\u32479 \'cd\'b3\u23548 \'b5\'bc\u20986 \'b3\'f6\u30340 \'b5\'c4\u25104 \'b3\'c9\u32489 \'bc\'a8\u21333 \'b5\'a5\u65292 \'a3\'ac\u32771 \'bf\'bc\u35797 \'ca\'d4\u33310 \'ce\'e8\u24330 \'b1\'d7\u32773 \'d5\'df\u19968 \'d2\'bb\u31080 \'c6\'b1\u21542 \'b7\'f1\u20915 \'be\'f6\u12290 \'a1\'a3\uc1
+\par 4\uc2\u12289 \'a1\'a2\u26377 \'d3\'d0\u24535 \'d6\'be\u24895 \'d4\'b8\u26381 \'b7\'fe\u21153 \'ce\'f1\u32463 \'be\'ad\u21382 \'c0\'fa\u32773 \'d5\'df\u20248 \'d3\'c5\u20808 \'cf\'c8\u65288 \'a3\'a8\u25552 \'cc\'e1\u20379 \'b9\'a9\u30456 \'cf\'e0\u20851 \'b9\'d8\u26448 \'b2\'c4\u26009 \'c1\'cf\u65289 \'a3\'a9\u12290 \'a1\'a3\uc1
+\par \uc2\u31526 \'b7\'fb\u21512 \'ba\'cf\u25512 \'cd\'c6\u33616 \'bc\'f6\u35201 \'d2\'aa\u27714 \'c7\'f3\u30340 \'b5\'c4\u26377 \'d3\'d0\u24847 \'d2\'e2\u21521 \'cf\'f2\u32773 \'d5\'df\u65292 \'a3\'ac\u22635 \'cc\'ee\u19968 \'d2\'bb\u19979 \'cf\'c2\u34920 \'b1\'ed\u21457 \'b7\'a2\u32473 \'b8\'f8\u25105 \'ce\'d2\u65292 \'a3\'ac\u26368 \'d7\'ee\u36831 \'b3\'d9\u26126 \'c3\'f7\u22825 \'cc\'ec\u19978 \'c9\'cf\u21320 \'ce\'e710\u28857 \'b5\'e3\u12290 \'a1\'a3\uc1\par}
